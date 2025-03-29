@@ -7,9 +7,18 @@
    font-family: 'Futura XBlk BT';
    src: url('static/fonts/subset-FuturaBT-ExtraBlack.woff2') format('woff2'),
        url('static/fonts/subset-FuturaBT-ExtraBlack.woff') format('woff');
-   font-weight: 900;
-   font-style: normal;
-   font-display: optional;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
@@ -24,9 +33,16 @@
 
 .text {
     color: #aaaaaa;
-    font-family: 'Futura XBlk BT';
+    font-family: 'Futura XBlk BT', sans-serif;
     font-size: clamp(2rem, 5dvw, 6rem);
     text-shadow: 0 0.8vw 0.8vw #c4b59d, 0 -0.3vw 0.15vw #fff;
-    display: inline-block;
 }
+
+.text span {
+    opacity: 0;
+    display: inline-block;
+    font-family: 'Futura XBlk BT', sans-serif;
+    animation: fadeIn 1s ease forwards;
+}
+
 
